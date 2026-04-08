@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Application</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #000;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #0078D4;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005ea6;
+        }
+
+        footer {
+            background-color: #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode .card {
+            background-color: #1e1e1e;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Static Application</h1>
+    <p id="greeting">Welcome!</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+
+    <!-- Feature 1: Greeting -->
+    <div class="card">
+        <h2>Personal Greeting</h2>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="greetUser()">Greet Me</button>
+    </div>
+
+    <!-- Feature 2: Form -->
+    <div class="card">
+        <h2>Simple Form</h2>
+        <form onsubmit="return submitForm()">
+            <label>Email:</label><br>
+            <input type="email" id="email" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formMessage"></p>
+    </div>
+
+    <!-- Feature 3: Dark Mode -->
+    <div class="card">
+        <h2>Theme Toggle</h2>
+        <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 My Static Application
+</footer>
+
+<script>
+    function greetUser() {
+        const name = document.getElementById("nameInput").value;
+        if (name) {
+            document.getElementById("greeting").innerText = "Hello, " + name + "!";
+        } else {
+            alert("Please enter your name");
+        }
+    }
+
+    function submitForm() {
+        document.getElementById("formMessage").innerText =
+            "Form submitted successfully!";
+        return false; // prevents page reload
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
+
+</body>
+</html>
