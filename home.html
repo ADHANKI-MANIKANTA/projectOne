@@ -1,2 +1,81 @@
-home my home
-your home 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Static Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0078D4;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #ddd;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005ea6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Static Application</h1>
+        <p>Simple HTML Application</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Welcome</h2>
+            <p>This is a basic static application built using HTML and CSS.</p>
+            <button onclick="showMessage()">Click Me</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 My Application
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Hello! This is a static HTML application.");
+        }
+    </script>
+
+</body>
+</html>
