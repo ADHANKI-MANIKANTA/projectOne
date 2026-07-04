@@ -1,1 +1,13 @@
-just to check the git practice 
+just togit branch        # Local branches only
+git branch -r     # Remote branches only
+git branch -a     # Local + remote branches
+git fetch --all   # Update remote branch information
+
+git branch -a
+* main
+  remotes/origin/main
+  remotes/origin/dev
+  remotes/origin/feature1
+
+  git branch -r
+   check the git practice 
